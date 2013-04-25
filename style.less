@@ -6,6 +6,149 @@ Author URI: https://github.com/redenovotempo
 Description: Framework para criação de temas Wordpress nos sites da Novo Tempo.
 Version: 0.1
 */
+@font-body: "Lucida Sans", Arial, sans-serif;
+@color-base: #2d87c3;
+
+body{
+	font-family: @font-body;
+}
+
+.logo{
+	width: 159px;
+	display: block;
+	margin: 0 auto;
+	line-height: 1;
+}
+
+.header{
+	padding: 35px 0;
+	background: #f1f1f1;
+	font-size: 16px;
+	line-height: 25px;
+	text-align: center;
+
+	h1{
+		font-size: 36px;
+		color: @color-base;
+	}
+}
+
+.navigation{
+	background: @color-base;
+	ul{
+		width: 630px;
+		margin: auto;
+		li{
+			display: block;
+			float: left;
+			a{
+				display: block;
+				padding: 15px 50px;
+				color: #fff;
+				font-family: "Nexa Light", Arial, sans-serif;
+				font-size: 16px;
+				border-right:1px solid rgba(255,255,255,0.5);
+				&:hover{
+					background: #18689e;
+					text-decoration: none;
+				}
+			}
+			&:last-child{
+				a{
+					border-right: none;
+				}
+			}
+		}
+	}
+}
+
+
+
+.main{
+	padding-top:40px;
+	letter-spacing: -0.03em;
+
+	.section{
+		margin-top: 40px;
+		margin-bottom: 100px;
+		h2{
+			font-family: @font-body;
+			font-size: 35px;
+			font-weight: bold;
+			color: @color-base;
+		}
+		h3{
+			font-family: @font-body;
+			font-size: 14px;
+			font-weight: bold;
+			color: #d88502;
+			margin-top: 20px;
+			margin-bottom: 0;
+		}
+	}
+
+
+	.lucida-sans{
+		font-family: @font-body;
+		font-size: 30px;
+		line-height: 35px;
+	}
+	.lucida-sans-bold{
+		font-family: @font-body;
+		font-size: 30px;
+		font-weight: bold;
+		line-height: 35px;
+	}
+	.nexa-book{
+		font-family: "Nexa Light", Arial, sans-serif;
+		font-size: 30px;
+		line-height: 35px;
+	}
+	.nexa-heavy{
+		font-family: "Nexa Heavy", Arial, sans-serif;
+		font-size: 30px;
+		line-height: 35px;	
+	}
+
+
+
+	.icons{
+		margin-top: 20px;
+		.box1{
+			font-size: 12px;
+			text-align: center;
+			background: #eee;
+			border-radius: .25em;
+			box-shadow: inset 0 0 0 1px #F8F8F8, 0 0 0 1px #CCC;
+			margin-bottom: 15px;
+			i{
+				display: block;
+				line-height: 1.5;
+				font-size: 32px;
+			}
+		}
+	}
+}
+
+
+.footer{
+	margin-top: 50px;
+	background: #eee;
+	padding: 20px;
+	text-align: center; 
+	font-size: 13px;
+	color:#a5a5a5; 
+}
+
+a{
+	&:link, &:visited{
+		color: @color-base;
+		text-decoration: none;
+	}
+	&:hover, &:active{
+		text-decoration: underline;
+	}
+}
 
 
 
@@ -21,7 +164,42 @@ Version: 0.1
 
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 767px) {
-	
+	.header{
+		h1{
+			font-size: 28px;
+			line-height: 34px;
+		}
+		.description{
+			font-size: 16px;
+			line-height: 22px;
+		}
+	}
+	.navigation{
+		ul{
+			li{
+				float: none;
+				a{
+					width: 300px;
+					padding: 15px 0;
+					text-align: center;
+					border-right: none;
+					border-bottom: 1px solid rgba(255,255,255,0.5);
+				}
+				&:last-child{
+					a{
+						border-bottom: none;
+					}
+				}
+			}
+		}
+	}
+	.main{
+		.section{
+			h2{
+				font-size: 25px;
+			}
+		}
+	}
 }
 
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
